@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
@@ -8,32 +8,28 @@ const ProjectsSection = () => {
       description: 'Built an AI-based platform for startups with modules for project, legal, finance, and team management. Included role-based access, dashboards, and real-time syncing.',
       tags: ['MERN Stack', 'Firebase', 'AI Integration'],
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-      github: 'https://github.com',
-      demo: 'https://example.com'
+      github: 'https://github.com/farooqintheloop'
     },
     {
       title: 'Assistant Task Manager & Deadline Handler',
       description: 'Developed a mobile app with calendar, reminder notifications, and Firebase-based real-time data and user authentication.',
       tags: ['Flutter', 'Firebase', 'Mobile Development'],
       image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop',
-      github: 'https://github.com',
-      demo: 'https://example.com'
+      github: 'https://github.com/farooqintheloop'
     },
     {
       title: 'Personal Portfolio Website',
       description: 'Designed and developed a responsive personal portfolio to showcase projects and skills. Integrated contact form, blog section, and project demos using React, Node, and MongoDB.',
       tags: ['MERN Stack', 'React', 'MongoDB'],
       image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064&auto=format&fit=crop',
-      github: 'https://github.com',
-      demo: 'https://example.com'
+      github: 'https://github.com/farooqintheloop'
     },
     {
       title: 'Freelancer Marketplace Platform',
       description: 'Created a basic platform similar to Fiverr, enabling clients to post jobs and freelancers to bid. Included authentication, user dashboards, messaging, and job history using MongoDB and Express.',
       tags: ['MERN Stack', 'Express', 'MongoDB'],
       image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop',
-      github: 'https://github.com',
-      demo: 'https://example.com'
+      github: 'https://github.com/farooqintheloop'
     }
   ];
 
@@ -73,26 +69,15 @@ const ProjectsSection = () => {
                 ))}
               </div>
               
-              <div className="flex gap-4">
-                <a 
-                  href={project.github}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-gray-400 hover:text-white transition-colors"
-                >
-                  <Github size={18} className="mr-1" />
-                  <span>Code</span>
-                </a>
-                <a 
-                  href={project.demo}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-gray-400 hover:text-white transition-colors"
-                >
-                  <ExternalLink size={18} className="mr-1" />
-                  <span>Live Demo</span>
-                </a>
-              </div>
+              <a 
+                href={project.github}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center text-gray-400 hover:text-white transition-colors"
+              >
+                <Github size={18} className="mr-1" />
+                <span>View Code</span>
+              </a>
             </div>
           </div>
         ))}

@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import Badge from '../components/ui/badge';
 import Button from '../components/ui/button';
-import { ExternalLink, Award, Calendar } from 'lucide-react';
+import { ExternalLink, Award, Calendar, X } from 'lucide-react';
 
 const CertificationsSection = () => {
   const [selectedCert, setSelectedCert] = useState(null);
+  const [showAllCredentials, setShowAllCredentials] = useState(false);
 
   const certifications = [
     {
@@ -16,7 +17,8 @@ const CertificationsSection = () => {
       skills: ["Project Planning", "Risk Management", "Team Leadership", "Agile Methodology"],
       description: "Comprehensive project management fundamentals covering planning, execution, and delivery of successful projects.",
       badgeColor: "from-blue-600 to-blue-800",
-      verified: true
+      verified: true,
+      link: "https://www.credly.com/badges/7ca0ad66-5e5a-4b3e-9c8d-fc7cf46e04d5/public_url"
     },
     {
       title: "Getting Started with Flutter",
@@ -26,7 +28,8 @@ const CertificationsSection = () => {
       skills: ["Flutter", "Dart", "Mobile Development", "Cross-platform"],
       description: "Foundational Flutter development skills including widget creation, state management, and app architecture.",
       badgeColor: "from-blue-400 to-cyan-500",
-      verified: true
+      verified: true,
+      link: "https://developers.google.com/profile/u/farooqintheloop"
     },
     {
       title: "Bringing Places to Flutter App",
@@ -36,7 +39,8 @@ const CertificationsSection = () => {
       skills: ["Flutter", "Google Maps API", "Location Services", "UI/UX"],
       description: "Advanced Flutter development focusing on location-based features and Google Maps integration.",
       badgeColor: "from-blue-500 to-blue-600",
-      verified: true
+      verified: true,
+      link: "https://developers.google.com/profile/u/farooqintheloop"
     },
     {
       title: "Responsive Web Design",
@@ -46,7 +50,8 @@ const CertificationsSection = () => {
       skills: ["HTML", "CSS", "Responsive Design", "Accessibility"],
       description: "Modern web design principles including flexbox, grid, and mobile-first responsive design techniques.",
       badgeColor: "from-orange-500 to-red-500",
-      verified: true
+      verified: true,
+      link: "https://www.freecodecamp.org/certification/farooqintheloop/responsive-web-design"
     },
     {
       title: "Frontend Libraries",
@@ -56,7 +61,8 @@ const CertificationsSection = () => {
       skills: ["React", "Redux", "Bootstrap", "Sass"],
       description: "Building dynamic user interfaces with React, state management with Redux, and modern CSS frameworks.",
       badgeColor: "from-cyan-500 to-blue-600",
-      verified: true
+      verified: true,
+      link: "https://www.freecodecamp.org/certification/farooqintheloop/front-end-development-libraries"
     },
     {
       title: "Algorithms and Data Structures",
@@ -66,7 +72,8 @@ const CertificationsSection = () => {
       skills: ["JavaScript", "Algorithms", "Data Structures", "Problem Solving"],
       description: "Fundamental programming concepts including algorithms, data structures, and computational thinking.",
       badgeColor: "from-purple-500 to-indigo-600",
-      verified: true
+      verified: true,
+      link: "https://www.freecodecamp.org/certification/farooqintheloop/javascript-algorithms-and-data-structures"
     }
   ];
 
@@ -132,6 +139,10 @@ const CertificationsSection = () => {
                 size="sm" 
                 variant="outline" 
                 className="w-full border-blue-500/30 text-blue-400 hover:bg-blue-500/10"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open(cert.link, '_blank');
+                }}
               >
                 <ExternalLink className="mr-2 h-4 w-4" />
                 View Certificate
@@ -174,10 +185,66 @@ const CertificationsSection = () => {
         <Button 
           variant="outline" 
           className="border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-white"
+          onClick={() => setShowAllCredentials(true)}
         >
           View All Credentials
         </Button>
       </div>
+
+      {/* All Credentials Modal */}
+      {showAllCredentials && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6">
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-2xl font-bold text-white">All Credentials</h3>
+                <button 
+                  onClick={() => setShowAllCredentials(false)}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+              
+              <div className="space-y-6">
+                {certifications.map((cert, index) => (
+                  <div 
+                    key={index}
+                    className="bg-gray-800/50 rounded-lg p-6 border border-gray-700"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <h4 className="text-xl font-bold text-white mb-2">{cert.title}</h4>
+                        <p className="text-gray-400 mb-4">{cert.description}</p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {cert.skills.map((skill) => (
+                            <Badge 
+                              key={skill} 
+                              variant="secondary" 
+                              className="bg-gray-700 text-gray-300 text-xs"
+                            >
+                              {skill}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                      <Button 
+                        size="sm" 
+                        variant="outline" 
+                        className="border-blue-500/30 text-blue-400 hover:bg-blue-500/10"
+                        onClick={() => window.open(cert.link, '_blank')}
+                      >
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        View
+                      </Button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
