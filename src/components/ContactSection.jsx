@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import Button from '../components/ui/button';
-import Input from '../components/ui/input';
-import Textarea from '../components/ui/textarea';
-import { Mail, Phone, Linkedin, Github, Send, Rocket, Zap, Clock, CheckCircle } from 'lucide-react';
-import { useToast } from '../hooks/use-toast';
+import { Mail, Phone, Linkedin, Github, Rocket, Zap, Code, Database, Server, Terminal, Layout, Palette, Globe, Shield } from 'lucide-react';
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
+  const [activeSkill, setActiveSkill] = useState(null);
 
   const contactInfo = [
     {
@@ -46,38 +36,60 @@ const ContactSection = () => {
     }
   ];
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent! 🚀",
-        description: "Thanks for reaching out! I'll get back to you within 24 hours.",
-      });
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
-  };
+  const skills = [
+    {
+      icon: <Code className="h-6 w-6" />,
+      title: "Frontend Development",
+      description: "Building responsive and interactive user interfaces with React, Next.js, and modern CSS frameworks.",
+      color: "from-blue-500 to-blue-600",
+      technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript"]
+    },
+    {
+      icon: <Server className="h-6 w-6" />,
+      title: "Backend Development",
+      description: "Creating robust server-side applications and APIs using Node.js and Express.",
+      color: "from-purple-500 to-purple-600",
+      technologies: ["Node.js", "Express", "REST APIs", "MongoDB"]
+    },
+    {
+      icon: <Database className="h-6 w-6" />,
+      title: "Database Management",
+      description: "Designing and optimizing database schemas for optimal performance and scalability.",
+      color: "from-green-500 to-green-600",
+      technologies: ["MongoDB", "MySQL", "PostgreSQL", "Redis"]
+    },
+    {
+      icon: <Terminal className="h-6 w-6" />,
+      title: "DevOps & Tools",
+      description: "Implementing CI/CD pipelines and managing cloud infrastructure.",
+      color: "from-red-500 to-red-600",
+      technologies: ["Git", "Docker", "AWS", "CI/CD"]
+    },
+    {
+      icon: <Layout className="h-6 w-6" />,
+      title: "UI/UX Design",
+      description: "Creating intuitive and engaging user experiences with modern design principles.",
+      color: "from-yellow-500 to-yellow-600",
+      technologies: ["Figma", "Adobe XD", "Responsive Design", "Material UI"]
+    },
+    {
+      icon: <Shield className="h-6 w-6" />,
+      title: "Security",
+      description: "Implementing best practices for web security and data protection.",
+      color: "from-indigo-500 to-indigo-600",
+      technologies: ["JWT", "OAuth", "HTTPS", "Security Headers"]
+    }
+  ];
 
   return (
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-          Let's Build Something Stellar
+          Mission Control Center
         </h2>
         <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Ready to bring your vision to life? Let's discuss your project and create something amazing together 🚀
+          Explore my technical arsenal and discover how I can help bring your vision to life 🚀
         </p>
       </div>
 
@@ -85,10 +97,9 @@ const ContactSection = () => {
         {/* Contact Information */}
         <div className="space-y-8">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Connect With Me</h3>
             <p className="text-gray-300 mb-8">
-              I'm always excited to work on new projects and help bring innovative ideas to life. 
-              Whether you need a mobile app, web platform, or full-stack solution, let's connect and discuss how we can achieve your goals.
+              Ready to collaborate on your next project? Let's connect and discuss how we can create something amazing together.
             </p>
           </div>
 
@@ -117,128 +128,44 @@ const ContactSection = () => {
               </Card>
             ))}
           </div>
-
-          {/* Mission Control Card */}
-          <Card className="bg-gradient-to-br from-blue-500/10 via-gray-800/50 to-blue-600/10 border border-blue-500/20 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-blue-600/5"></div>
-            <CardContent className="p-6 relative z-10">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center">
-                  <Rocket className="h-4 w-4 text-white" />
-                </div>
-                <h4 className="text-lg font-bold text-white">Mission Control</h4>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300 text-sm">
-                  <Clock className="h-4 w-4 text-blue-400" />
-                  <span>Response within 24 hours</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300 text-sm">
-                  <Zap className="h-4 w-4 text-blue-500" />
-                  <span>Free project consultation</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300 text-sm">
-                  <CheckCircle className="h-4 w-4 text-cyan-400" />
-                  <span>Detailed project timeline</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300 text-sm">
-                  <Rocket className="h-4 w-4 text-blue-400" />
-                  <span>Transparent pricing</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
 
-        {/* Contact Form */}
-        <Card className="bg-gray-800/50 border-gray-700 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-blue-600/5"></div>
-          <CardHeader className="relative z-10">
-            <CardTitle className="text-white flex items-center">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center mr-3">
-                <Send className="h-4 w-4 text-white" />
-              </div>
-              Launch Communication
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="relative z-10">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                  Commander Name *
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  className="bg-gray-700/50 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500 focus:ring-1"
-                  placeholder="Your full name"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Space Communication Frequency *
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="bg-gray-700/50 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500 focus:ring-1"
-                  placeholder="your.email@galaxy.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Mission Briefing *
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  required
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows={5}
-                  className="bg-gray-700/50 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500 focus:ring-1 resize-none"
-                  placeholder="Describe your project mission, timeline, resources, and specific objectives..."
-                />
-              </div>
-
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium py-3 transition-all duration-300 relative overflow-hidden group"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity"></div>
-                {isSubmitting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                    Initiating Launch...
-                  </>
-                ) : (
-                  <>
-                    <Rocket className="mr-2 h-4 w-4" />
-                    Launch Mission Briefing 🚀
-                  </>
+        {/* Skills Showcase */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {skills.map((skill, index) => (
+            <Card 
+              key={index}
+              className={`bg-gray-800/50 border-gray-700 hover:border-${skill.color.split('-')[1]}-600/50 transition-all duration-300 cursor-pointer`}
+              onClick={() => setActiveSkill(activeSkill === index ? null : index)}
+            >
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${skill.color} flex items-center justify-center`}>
+                    {skill.icon}
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-white">{skill.title}</h4>
+                  </div>
+                </div>
+                {activeSkill === index && (
+                  <div className="mt-4 space-y-4">
+                    <p className="text-gray-300 text-sm">{skill.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {skill.technologies.map((tech, techIndex) => (
+                        <span 
+                          key={techIndex}
+                          className="px-3 py-1 text-sm rounded-full bg-gray-700/50 text-gray-300"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 )}
-              </Button>
-            </form>
-
-            <div className="mt-6 text-center text-sm text-gray-400">
-              <p>Direct communication channel:</p>
-              <a href="mailto:umar57988@gmail.com" className="text-blue-400 hover:underline font-medium">
-                umar57988@gmail.com
-              </a>
-            </div>
-          </CardContent>
-        </Card>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </div>
   );
