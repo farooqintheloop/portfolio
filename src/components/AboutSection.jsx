@@ -21,7 +21,7 @@ const AboutSection = () => {
           <div className="mb-6">
             <h3 className="text-xl font-semibold text-white mb-2">Contact Information</h3>
             <p className="text-gray-300">Cell: 0343-4155170</p>
-            <p className="text-gray-300">Email: umar57988@gmail.com</p>
+            <p className="text-gray-300">Email: thefarooq.dev@gmail.com</p>
             <p className="text-gray-300">LinkedIn: linkedin.com/in/muhammad-umar-farooq-dev</p>
           </div>
           <p className="text-lg text-gray-300 mb-6">

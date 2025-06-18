@@ -101,7 +101,7 @@ const TestimonialsSection = () => {
             Let's discuss how we can bring your project vision to life with reliable, scalable solutions.
           </p>
           <div className="text-blue-400 font-medium">
-            📧 umar57988@gmail.com • 📱 0343-4155170
+            📧 thefarooq.dev@gmail.com • 📱 0343-4155170
           </div>
         </div>
       </div>

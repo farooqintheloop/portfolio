@@ -48,7 +48,7 @@ npm run build
 
 ## Contact
 
-- Email: umar57988@gmail.com
+- Email: thefarooq.dev@gmail.com
 - LinkedIn: [linkedin.com/in/muhammad-umar-farooq-dev](https://linkedin.com/in/muhammad-umar-farooq-dev)
 - GitHub: [github.com/farooqintheloop](https://github.com/farooqintheloop)
 
