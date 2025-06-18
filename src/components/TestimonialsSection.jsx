@@ -1,89 +1,70 @@
 import React from 'react';
 import { Card, CardContent } from '../components/ui/card';
-import { Star, Quote } from 'lucide-react';
-import Button from '../components/ui/button';
+import { Quote } from 'lucide-react';
 
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "Startup Founder",
-      company: "TechVenture Inc.",
-      content: "Umar delivered our mobile app ahead of schedule with exceptional quality. His attention to detail and proactive communication made the entire process seamless. The app performance improvements exceeded our expectations.",
-      rating: 5,
-      project: "Flutter Mobile App"
+      name: "Muhammad Mussaub Mobeen",
+      role: "CEO @equivl | Digital Marketer | Software Engineer",
+      image: "https://media.licdn.com/dms/image/D4D03AQF7QZQZQZQZQZQ/profile-displayphoto-shrink_800_800/0/1677660000000?e=1721865600&v=beta&t=QZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQ",
+      quote: "Working with Muhammad Umar Farooq has been an absolute pleasure. His technical expertise and problem-solving skills are exceptional. He consistently delivers high-quality solutions and is always willing to go the extra mile to ensure project success.",
+      linkedin: "https://linkedin.com/in/muhammad-mussaub-mobeen"
     },
     {
-      name: "Michael Rodriguez",
-      role: "Product Manager",
-      company: "Digital Solutions Co.",
-      content: "Working with Umar on our web platform was outstanding. He transformed our complex requirements into an intuitive, scalable solution. His expertise in the MERN stack really showed in the final product.",
-      rating: 5,
-      project: "Full-Stack Platform"
-    },
-    {
-      name: "Lisa Thompson",
-      role: "CTO",
-      company: "InnovateLab",
-      content: "Umar's ability to optimize our backend performance was remarkable - 40% improvement in load times! His clean code and comprehensive documentation made future maintenance effortless.",
-      rating: 5,
-      project: "Performance Optimization"
+      name: "Sohaib Ahmad",
+      role: "CEO at XTREEM | 🚀 Boosting Sales | 📈 Empowering Brands",
+      image: "https://media.licdn.com/dms/image/D4D03AQF7QZQZQZQZQZQ/profile-displayphoto-shrink_800_800/0/1677660000000?e=1721865600&v=beta&t=QZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQ",
+      quote: "Muhammad Umar Farooq is a talented developer who brings innovative solutions to the table. His attention to detail and commitment to excellence make him an invaluable asset to any project. I highly recommend his services for any development needs.",
+      linkedin: "https://linkedin.com/in/sohaib-ahmad"
     }
   ];
 
-  const stats = [
-    { number: "90+", label: "Projects Completed", color: "text-blue-400" },
-    { number: "100%", label: "On-Time Delivery", color: "text-blue-500" },
-    { number: "35%", label: "Avg. Productivity Increase", color: "text-cyan-400" },
-    { number: "40%", label: "Performance Improvement", color: "text-blue-600" }
-  ];
-
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-          What Clients Say
+          Client Testimonials
         </h2>
         <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Building lasting relationships through exceptional delivery and reliable communication
+          Hear what industry leaders have to say about working with me
         </p>
       </div>
 
-      {/* Stats Section */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-        {stats.map((stat, index) => (
-          <div key={index} className="text-center">
-            <div className={`text-3xl md:text-4xl font-bold ${stat.color} mb-2`}>
-              {stat.number}
-            </div>
-            <div className="text-gray-400 text-sm">{stat.label}</div>
-          </div>
-        ))}
-      </div>
-
-      {/* Testimonials */}
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 gap-8">
         {testimonials.map((testimonial, index) => (
-          <Card key={index} className="bg-gray-800/50 border-gray-700 hover:border-blue-600/50 transition-all duration-300 hover:scale-105">
+          <Card key={index} className="bg-gray-800/50 border-gray-700 hover:border-blue-600/50 transition-all duration-300">
             <CardContent className="p-6">
-              <div className="flex items-center mb-4">
-                <Quote className="text-blue-400 h-6 w-6 mr-2" />
-                <div className="flex space-x-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  ))}
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </div>
-              
-              <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-              
-              <div className="border-t border-gray-700 pt-4">
-                <div className="font-bold text-white">{testimonial.name}</div>
-                <div className="text-blue-400 text-sm">{testimonial.role}</div>
-                <div className="text-gray-400 text-sm">{testimonial.company}</div>
-                <div className="text-blue-500 text-xs mt-1 font-medium">
-                  Project: {testimonial.project}
+                <div className="flex-1">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{testimonial.name}</h3>
+                      <p className="text-sm text-gray-400">{testimonial.role}</p>
+                    </div>
+                    <Quote className="h-6 w-6 text-blue-500" />
+                  </div>
+                  <p className="mt-4 text-gray-300">
+                    {testimonial.quote}
+                  </p>
+                  <div className="mt-4">
+                    <a
+                      href={testimonial.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-blue-300 text-sm font-medium"
+                    >
+                      View LinkedIn Profile →
+                    </a>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -91,14 +72,10 @@ const TestimonialsSection = () => {
         ))}
       </div>
 
-      {/* Call to Action */}
-      <div className="text-center mt-16">
-        <div className="bg-gradient-to-r from-blue-500/10 to-blue-600/10 border border-blue-500/20 rounded-lg p-8">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Ready to join these satisfied clients?
-          </h3>
-          <p className="text-gray-300 mb-6">
-            Let's discuss how we can bring your project vision to life with reliable, scalable solutions.
+      <div className="mt-16 text-center">
+        <div className="inline-block p-6 bg-gray-800/50 rounded-lg border border-gray-700">
+          <p className="text-gray-300 mb-4">
+            Ready to start your next project?
           </p>
           <div className="text-blue-400 font-medium">
             📧 thefarooq.dev@gmail.com • 📱 0343-4155170
