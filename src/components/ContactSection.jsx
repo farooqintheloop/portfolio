@@ -9,8 +9,8 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       label: "Email",
-      value: "umar57988@gmail.com",
-      link: "mailto:umar57988@gmail.com",
+      value: "thefarooq.dev@gmail.com",
+      link: "mailto:thefarooq.dev@gmail.com",
       color: "text-blue-400"
     },
     {
@@ -127,6 +127,13 @@ const ContactSection = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="mt-6 text-center text-sm text-gray-400">
+            <p>Direct communication channel:</p>
+            <a href="mailto:thefarooq.dev@gmail.com" className="text-blue-400 hover:underline font-medium">
+              thefarooq.dev@gmail.com
+            </a>
           </div>
         </div>
 
