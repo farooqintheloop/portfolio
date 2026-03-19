@@ -10,11 +10,10 @@ const HeroSection = () => {
           Muhammad Umar Farooq
         </h1>
         <h2 className="text-xl md:text-2xl text-gray-300 mb-6">
-          Software Engineer | Flutter Developer | MERN Stack Developer
+          Full Stack Developer | MERN · Next.js · Flutter | 20+ Apps Shipped
         </h2>
         <p className="text-gray-400 mb-8 max-w-xl">
-          Building elegant, efficient and user-friendly applications for mobile and web platforms.
-          Passionate about creating seamless digital experiences.
+          I build production-grade web and mobile applications — from AI-powered SaaS platforms to multi-role systems and LMS platforms. Clean code, real results, shipped on time.
         </p>
         <div className="flex flex-wrap gap-4 justify-center md:justify-start">
           <a 

@@ -4,31 +4,38 @@ import { Github } from 'lucide-react';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'HeadStart – AI Startup Management Platform',
-      description: 'Built an AI-based platform for startups with modules for project, legal, finance, and team management. Included role-based access, dashboards, and real-time syncing.',
-      tags: ['MERN Stack', 'Firebase', 'AI Integration'],
+      title: 'AutoCaption – AI Video Captioning Tool',
+      description: 'Built a Python-based tool that transcribes spoken audio from any video and generates a new captioned video with accurately timestamped subtitles burned onto frames. Fully automated, no manual input required.',
+      tags: ['Python', 'Speech Recognition', 'Video Processing', 'AI'],
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
       github: 'https://github.com/farooqintheloop'
     },
     {
-      title: 'Assistant Task Manager & Deadline Handler',
-      description: 'Developed a mobile app with calendar, reminder notifications, and Firebase-based real-time data and user authentication.',
-      tags: ['Flutter', 'Firebase', 'Mobile Development'],
+      title: 'HeadStart – AI Startup Management Platform',
+      description: 'Built an AI-powered SaaS platform for early-stage startups to automate workflows, manage teams, legal, and finance — with role-based access and real-time syncing. Selected among Top 10 projects at COMSATS University Expo 2025.',
+      tags: ['React', 'Node.js', 'MongoDB', 'Express', 'AI'],
       image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop',
       github: 'https://github.com/farooqintheloop'
     },
     {
-      title: 'Personal Portfolio Website',
-      description: 'Designed and developed a responsive personal portfolio to showcase projects and skills. Integrated contact form, blog section, and project demos using React, Node, and MongoDB.',
-      tags: ['MERN Stack', 'React', 'MongoDB'],
+      title: 'AM LMS – Learning Management System',
+      description: 'Full-stack LMS with secure video streaming using chunking, segmentation, and signed URLs. Backend deployed on Cloudflare with D1 database and Vultr server adapter for scalable delivery.',
+      tags: ['Flutter', 'React', 'Node.js', 'Cloudflare', 'D1'],
       image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064&auto=format&fit=crop',
       github: 'https://github.com/farooqintheloop'
     },
     {
-      title: 'Freelancer Marketplace Platform',
-      description: 'Created a basic platform similar to Fiverr, enabling clients to post jobs and freelancers to bid. Included authentication, user dashboards, messaging, and job history using MongoDB and Express.',
-      tags: ['MERN Stack', 'Express', 'MongoDB'],
+      title: 'Foodler – Restaurant & POS Management Platform',
+      description: 'Restaurant aggregation platform with integrated POS supporting multiple roles — owner, chef, manager, waiter, customer. Full analytics dashboards and reporting built on Node.js and PostgreSQL.',
+      tags: ['React', 'Node.js', 'PostgreSQL', 'REST APIs'],
       image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop',
+      github: 'https://github.com/farooqintheloop'
+    },
+    {
+      title: 'Lordan Dev – Multi AI Chatbot',
+      description: 'Resolved UI and backend configuration issues in a multi-model AI chatbot allowing users to switch between different AI conversation modes. Optimized for Play Store deployment.',
+      tags: ['React Native', 'AI', 'Firebase'],
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
       github: 'https://github.com/farooqintheloop'
     }
   ];

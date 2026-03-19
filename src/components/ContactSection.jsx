@@ -31,7 +31,7 @@ const ContactSection = () => {
       icon: <Github className="h-6 w-6" />,
       label: "GitHub",
       value: "View Projects",
-      link: "https://github.com",
+      link: "https://github.com/farooqintheloop",
       color: "text-gray-400"
     }
   ];

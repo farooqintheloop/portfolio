@@ -25,13 +25,13 @@ const AboutSection = () => {
             <p className="text-gray-300">LinkedIn: linkedin.com/in/muhammad-umar-farooq-dev</p>
           </div>
           <p className="text-lg text-gray-300 mb-6">
-            Recent Software Engineering graduate from COMSATS University with solid foundations in Java, Flutter, Firebase, and the MERN stack. Strong problem-solving abilities demonstrated through real-world freelance and academic projects. Passionate about clean, scalable code and continuous improvement.
+            Full Stack Developer with 3+ years of experience building and shipping real products for international clients. I work across the full stack — React, Next.js, Node.js, Flutter, MongoDB, PostgreSQL — whatever the product needs.
           </p>
           <p className="text-lg text-gray-300 mb-6">
-            Currently working as a Freelance Mobile & Web Developer at Webnike, where I've assisted in 90+ client projects using Flutter and the MERN stack. My work has consistently improved client productivity and customer engagement through intuitive UX/UI development and optimized backend solutions.
+            Most of my work has been remote, collaborating with clients across 4 countries. I've shipped 20+ production applications including SaaS platforms, LMS systems with secure video streaming, multi-role POS platforms, and AI-powered tools.
           </p>
           <p className="text-lg text-gray-300">
-            I hold a BS in Software Engineering from COMSATS University Islamabad with a CGPA of 3.1, and I'm continuously enhancing my skills through various certifications from IBM and Google.
+            I hold a BS in Software Engineering from COMSATS University Islamabad. Currently open to remote full-stack or mobile development roles.
           </p>
         </div>
         

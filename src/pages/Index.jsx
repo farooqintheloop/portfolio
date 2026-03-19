@@ -1,6 +1,4 @@
 import React from 'react';
-// Debug
-console.log('Index component is loading');
 import StarField from '../components/StarField';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
@@ -12,8 +10,6 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import ContactSection from '../components/ContactSection';
 
 const Index = () => {
-  console.log('Index component is rendering');
-  
   return (
     <div className="relative min-h-screen">
       <StarField />
@@ -51,7 +47,7 @@ const Index = () => {
         <footer className="py-6 text-center text-gray-400 text-sm border-t border-gray-800">
           <div className="container mx-auto">
             <p>© {new Date().getFullYear()} Muhammad Umar Farooq. All rights reserved.</p>
-            <p className="mt-2">Software Engineer | Flutter Developer | MERN Stack Developer</p>
+            <p className="mt-2">Full Stack Developer | MERN · Next.js · Flutter | Open to Remote</p>
           </div>
         </footer>
       </main>
