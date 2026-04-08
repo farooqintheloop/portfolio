@@ -1,20 +1,18 @@
 import React from 'react';
 import { Card, CardContent } from '../components/ui/card';
-import { Quote } from 'lucide-react';
+import { Quote, User } from 'lucide-react';
 
 const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Muhammad Mussaub Mobeen",
-      role: "CEO @equivl | Digital Marketer | Software Engineer",
-      image: "https://media.licdn.com/dms/image/D4D03AQF7QZQZQZQZQZQ/profile-displayphoto-shrink_800_800/0/1677660000000?e=1721865600&v=beta&t=QZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQ",
+      role: "CEO @atlaze.co | Digital Marketer | Software Engineer",
       quote: "Working with Muhammad Umar Farooq has been an absolute pleasure. His technical expertise and problem-solving skills are exceptional. He consistently delivers high-quality solutions and is always willing to go the extra mile to ensure project success.",
       linkedin: "https://linkedin.com/in/muhammad-mussaub-mobeen"
     },
     {
       name: "Sohaib Ahmad",
       role: "CEO at XTREEM | 🚀 Boosting Sales | 📈 Empowering Brands",
-      image: "https://media.licdn.com/dms/image/D4D03AQF7QZQZQZQZQZQ/profile-displayphoto-shrink_800_800/0/1677660000000?e=1721865600&v=beta&t=QZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQZQ",
       quote: "Muhammad Umar Farooq is a talented developer who brings innovative solutions to the table. His attention to detail and commitment to excellence make him an invaluable asset to any project. I highly recommend his services for any development needs.",
       linkedin: "https://linkedin.com/in/sohaib-ahmad"
     }
@@ -37,12 +35,8 @@ const TestimonialsSection = () => {
           <Card key={index} className="bg-gray-800/50 border-gray-700 hover:border-blue-600/50 transition-all duration-300">
             <CardContent className="p-6">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-gray-900/60 border border-gray-700 flex items-center justify-center">
+                  <User className="h-6 w-6 text-gray-300" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
