@@ -3,10 +3,10 @@ import { Users, Globe, Code, Award } from 'lucide-react';
 
 const AboutSection = () => {
   const stats = [
-    { label: 'Projects Completed', value: '90+', icon: Code },
-    { label: 'Productivity Improvement', value: '35%', icon: Users },
-    { label: 'Customer Engagement', value: '25%', icon: Globe },
-    { label: 'Load Time Reduction', value: '40%', icon: Award },
+    { label: 'Projects Completed', value: '20+', icon: Code },
+    { label: 'Years Building Software', value: '3+', icon: Users },
+    { label: 'Client Countries', value: '4+', icon: Globe },
+    { label: 'Development Areas', value: '6', icon: Award },
   ];
 
   return (
