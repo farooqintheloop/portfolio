@@ -25,13 +25,13 @@ const AboutSection = () => {
             <p className="text-gray-300">LinkedIn: linkedin.com/in/muhammad-umar-farooq-dev</p>
           </div>
           <p className="text-lg text-gray-300 mb-6">
-            Full Stack Developer with 3+ years of experience building and shipping real products for international clients. I work across the full stack — React, Next.js, Node.js, Flutter, MongoDB, PostgreSQL — whatever the product needs.
+            Full-Stack & Mobile Developer with hands-on experience building and shipping real products for clients and independent projects. I work across the stack — React, Next.js, Node.js, Flutter, MongoDB, PostgreSQL, Firebase, and related technologies — depending on what the product needs.
           </p>
           <p className="text-lg text-gray-300 mb-6">
-            Most of my work has been remote, collaborating with clients across 4 countries. I've shipped 20+ production applications including SaaS platforms, LMS systems with secure video streaming, multi-role POS platforms, and AI-powered tools.
+            Most of my work has involved real client and product development, including SaaS platforms, LMS systems, multi-role operational platforms, restaurant/POS systems, AI-powered tools, and mobile applications.
           </p>
           <p className="text-lg text-gray-300">
-            I hold a BS in Software Engineering from COMSATS University Islamabad. Currently open to remote full-stack or mobile development roles.
+            I hold a BS in Software Engineering from COMSATS University Islamabad and am currently open to remote full-stack or mobile development opportunities.
           </p>
         </div>
         

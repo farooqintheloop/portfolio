@@ -8,31 +8,26 @@ const SkillOrbit = () => {
     { 
       name: 'Java', 
       color: '#007396',
-      proficiency: '90%',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg'
     },
     { 
       name: 'JavaScript', 
       color: '#f0db4f',
-      proficiency: '95%',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
     },
     { 
       name: 'Python', 
       color: '#3776AB',
-      proficiency: '85%',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'
     },
     { 
       name: 'Dart', 
       color: '#0175C2',
-      proficiency: '90%',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg'
     },
     { 
       name: 'Flutter', 
       color: '#02569B',
-      proficiency: '92%',
       logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg'
     },
     { 

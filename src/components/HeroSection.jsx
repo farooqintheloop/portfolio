@@ -6,14 +6,15 @@ const HeroSection = () => {
   return (
     <div className="container mx-auto px-4 text-center md:text-left flex flex-col md:flex-row items-center">
       <div className="md:w-1/2 mb-10 md:mb-0">
+Muhammad Umar Farooq
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
           Muhammad Umar Farooq
         </h1>
         <h2 className="text-xl md:text-2xl text-gray-300 mb-6">
-          Full Stack Developer | MERN · Next.js · Flutter | 20+ Apps Shipped
+          Full-Stack & Mobile Developer | React · Node.js · Flutter
         </h2>
         <p className="text-gray-400 mb-8 max-w-xl">
-          I build production-grade web and mobile applications — from AI-powered SaaS platforms to multi-role systems and LMS platforms. Clean code, real results, shipped on time.
+          I build real products across web and mobile — from SaaS platforms and multi-role systems to LMS and AI-powered applications. I care about clean architecture, polished interfaces, and shipping software that actually works.
         </p>
         <div className="flex flex-wrap gap-4 justify-center md:justify-start">
           <a 
